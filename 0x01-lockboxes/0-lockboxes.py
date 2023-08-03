@@ -14,7 +14,7 @@ def canUnlockAll(boxes):
     """
     n = len(boxes)
     checked_boxes = set([0])
-    unchecked_boxes = set(boxes[0]).differences(set([0]))
+    unchecked_boxes = set(boxes[0]).difference(set([0]))
 
     while len(unchecked_boxes) > 0:
         boxId = unchecked_boxes.pop()
