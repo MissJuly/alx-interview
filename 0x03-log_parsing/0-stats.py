@@ -13,6 +13,9 @@ if __name__ == '__main__':
     stats = {k: 0 for k in codes}
 
     def print_stats(stats: dict, file_size: int) -> None:
+        """
+        print stats given
+        """
         print("File size: {:d}".format(filesize))
         for k, v in sorted(stats.items()):
             if v:
@@ -34,8 +37,7 @@ if __name__ == '__main__':
                 pass
             if count % 10 == 0:
                 print_stats(stats, filesize)
-            print_stats(stats, filesize)
+        print_stats(stats, filesize)
     except KeyboardInterrupt:
         print_stats(stats, filesize)
         raise
-
